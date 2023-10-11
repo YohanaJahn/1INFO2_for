@@ -9,11 +9,30 @@
 
 
     //Processamento
-
+    let programacao = [];
+    let fisica = [];
+    let somaPro = 0;
+    let somaFi = 0;
+    for (let i = 1; i <= 7; i++) {
+        let materia = prompt("Informe de qual materia é a nota a seguir, (P)rogramação ou (F)ísica:").trim().toLocaleUpperCase();
+        let nota = Number(prompt("Informe qual foi a nota:").trim().toLocaleUpperCase());
+        if(materia == "P"){
+            programacao.push(nota)
+            somaPro += nota
+        }
+        else if(materia == "F"){
+            fisica.push(nota);
+            somaFi += nota
+        }
+        else{
+            alert("Valores Invalidos.")
+        }
+    }
 
     //Saída
-
+    alert(`A média em Programação foi de ${somaPro / (programacao.length)}.\nA média em Física foi de ${somaFi / (fisica.length)}.`)
     /*
+    ${(somaPro / (programacao.length + 1))}
     Considere que as notas a serem informadas pelo aluno são:
     Disciplina  | Nota
         P       |  5

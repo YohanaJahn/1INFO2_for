@@ -8,13 +8,27 @@
     */
 
     //Entrada
-
+    let lista = ["Gol", "YBR", "CG", "Titan", "Palio", "Fusca", "Harley Davidson"];
 
     //Processamento
-
+    let carros = [];
+    let motocicletas = [];
+    for (const item of lista) {
+        const valor = prompt(`Informe se ${item} é (C)arro ou (M)otocicleta:`).toLocaleUpperCase().trim();
+        if(valor == "C"){
+            carros.push(item)
+        }
+        else if(valor == "M"){
+            motocicletas.push(item)
+        }
+        else{
+            alert("Valor Inválido");
+        }
+    }
 
     //Saída
 
+    alert(`Lista de carros: ${carros.join(", ")}\nLista de motos: ${motocicletas.join(", ")}.`)
     /*
     Lista de carros: Gol, Palio, Fusca
     Lista de motos: YBR, CG, Titan, Harley Davidson

@@ -7,13 +7,23 @@
     */
 
     //Entrada
-
+    let par = [];
+    let impar = [];
 
     //Processamento
-
+    let lista = [30, 20, 25, 17, 99, 12];
+    for (const item of lista) {
+        if (item % 2 == 0) {
+            par.push(item);
+        }
+        else{
+            impar.push(item);
+        }
+    }
 
     //Saída
 
+    alert(`Os números ${par.sort((a, b) => a - b)} são pares, e os ${impar.sort((a, b) => a - b)} são ímpares.`)
     /*
     O programa deverá apresentar:
     12 é par
